@@ -2,9 +2,9 @@
 
 1) Клонируем
 2) `docker compose up`
-3) Открываем [http://localhost:8080](https://xxxxxxxx.org)
+3) Открываем [http://localhost:8080](http://localhost:8080)
 
-Как должно работать: [ссылка на видео](https://xxxxxxxx.org)
+Как должно работать: [ссылка на видео](https://disk.yandex.ru/i/jl4G0ic_SyOnhg)
 
 ## Если не заработало
 
