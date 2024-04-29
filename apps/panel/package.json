@@ -1,0 +1,22 @@
+{
+  "name": "client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode=production --base=/panel/",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "codemirror": "^5.65.16",
+    "codemirror-editor-vue3": "^2.5.8",
+    "vue": "^3.4.21",
+    "vue-inbrowser-compiler": "^4.72.4",
+    "vue3-runtime-template": "^1.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.8"
+  }
+}

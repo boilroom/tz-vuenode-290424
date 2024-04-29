@@ -1,0 +1,63 @@
+template: >
+  <div class="defaut-card">
+    <div class="defaut-card__img-wrap">
+      <img :src="cardData.img_src" class="defaut-card__img" />
+    </div>
+    <h2 class="defaut-card__title">{{ cardData.card_title }}</h2>
+    <p class="defaut-card__text">{{ cardData.card_text }}</p>
+  </div>
+css: >
+  .defaut-card {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 60px #0003444d;
+  }
+  .defaut-card__img-wrap {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #666;
+  }
+  .defaut-card__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .defaut-card__title {
+    color: hotpink;
+    font-weight: 500;
+    margin: 16px 0 10px 0;
+  }
+  .defaut-card__text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .defaut-card__button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .defaut-card__button {
+    position: absolute;
+    bottom: -80px;
+    padding: 10px 20px;
+    background-color: #3139fb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .defaut-card__button:hover {
+    background-color: #1f24b8;
+  }

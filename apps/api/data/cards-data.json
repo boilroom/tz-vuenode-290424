@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "card_title": "Book of the day -- \"1984\"",
+    "img_src": "https://as1.ftcdn.net/v2/jpg/03/57/91/08/1000_F_357910869_YUvUKXyOBoG50VPVlIzV7w3PE1a4ZGKx.jpg",
+    "card_text": "The story takes place in an imagined future in an unspecified year believed to be 1984, when much of the world is in perpetual war. Great Britain, now known as Airstrip One, has become a province of the totalitarian superstate Oceania, which is led by Big Brother, a dictatorial leader supported by an intense cult of personality manufactured by the Party's Thought Police."
+  },
+  {
+    "id": 2,
+    "card_title": "Book of the day -- \"Brave New World\"",
+    "img_src": "https://pixelbuddha.net/storage/25232/tv-noise-photo-effect-1.jpg",
+    "card_text": "The novel anticipates developments in reproductive technology, sleep-learning, psychological manipulation, and classical conditioning that are combined to profoundly change society. Far in the future, the World Controllers have created the ideal society. Through clever use of genetic engineering, brainwashing"
+  }
+]

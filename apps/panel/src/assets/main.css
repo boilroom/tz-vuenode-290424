@@ -1,0 +1,24 @@
+@import './cssreset.css';
+
+* {
+  outline: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+img {
+  vertical-align: middle;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  overflow-y: scroll;
+}
