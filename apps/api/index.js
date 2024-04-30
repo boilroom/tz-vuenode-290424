@@ -22,6 +22,7 @@ const urlMasks = {
         const dataToWrite = YAML.stringify({
           template: formData.template,
           css: formData.css,
+          ts: Date.now(),
         });
         fs.writeFileSync(DATA_PATH + '/card-template.yml', dataToWrite);
         return formData;

@@ -24,6 +24,10 @@ const props = defineProps({
   css: {
     type: String,
     default: ''
+  },
+  ts: {
+    type: Number,
+    default: 0
   }
 })
 
@@ -63,14 +67,18 @@ const cmp = defineAsyncComponent(
                 const el = cmpRef.value.$el;
                 const scopeId = el.getAttributeNames().find(attr => attr.startsWith('data-v-')).replace('data-v-', '');
                 el.querySelectorAll('*').forEach(el => el.setAttribute(`data-v-${scopeId}`, ''))
-                const style = document.createElement('style')
-                const { code } = compileStyle({
-                  source: props.mode === 'editor' ? props.css : data[1].css,
-                  id: scopeId,
-                  scoped: true
-                })
-                style.textContent = code
-                document.head.appendChild(style)
+                const styleId = `style-${scopeId}-${props.mode === 'editor' ? props.ts : data[1].ts}`
+                if (!document.getElementById(styleId)) {
+                  const style = document.createElement('style')
+                  style.id = styleId
+                  const { code } = compileStyle({
+                    source: props.mode === 'editor' ? props.css : data[1].css,
+                    id: scopeId,
+                    scoped: true
+                  })
+                  style.textContent = code
+                  document.head.appendChild(style)
+                }
               })
               return { cardData }
             }

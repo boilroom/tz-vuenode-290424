@@ -11,6 +11,7 @@ const template = ref('')
 const validTemplate = ref('')
 const isInvalidTemplate = ref(false)
 const css = ref('')
+const ts = ref(0)
 const updateKey = ref(Date.now())
 const cardData = ref({})
 const loaded = ref(false)
@@ -25,6 +26,7 @@ Promise.all(dataUrlList.map(url => fetch(url).then(resp => resp.json())))
     template.value = data[0].template
     validTemplate.value = data[0].template
     css.value = data[0].css
+    ts.value = data[0].ts
     cardData.value = data[1]
     loaded.value = true
   })
@@ -154,6 +156,7 @@ const save = () => {
         :data="cardData"
         :template="validTemplate"
         :css="css"
+        :ts="ts"
         :key="updateKey"
       />
     </section>
