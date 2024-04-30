@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineAsyncComponent, onMounted, getCurrentInstance } from 'vue'
+import { ref, defineAsyncComponent, onMounted } from 'vue'
 import { compileStyle } from '@vue/compiler-sfc'
 
 const baseURL = import.meta.env.VITE_API_URL || '';
