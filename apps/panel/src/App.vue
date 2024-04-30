@@ -67,7 +67,8 @@ const validateTemplate = (html) => {
     source: html,
     id: 'templateValidate',
   })
-  return cmp.errors.length === 0;
+  const doubleQuotesInsideTags = html.match(/<([^>]+?)""(.*?)>/gm)
+  return cmp.errors.length === 0 && !doubleQuotesInsideTags
 }
 
 const changeCode = () => {
