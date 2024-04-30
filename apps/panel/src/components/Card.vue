@@ -68,7 +68,7 @@ const cmp = defineAsyncComponent(
                 const scopeId = el.getAttributeNames().find(attr => attr.startsWith('data-v-')).replace('data-v-', '');
                 el.querySelectorAll('*').forEach(el => el.setAttribute(`data-v-${scopeId}`, ''))
                 const styleId = `style-${scopeId}-${props.mode === 'editor' ? props.ts : data[1].ts}`
-                if (!document.getElementById(styleId)) {
+                if (!document.getElementById(styleId) || props.mode === 'editor') {
                   const style = document.createElement('style')
                   style.id = styleId
                   const { code } = compileStyle({
@@ -77,7 +77,11 @@ const cmp = defineAsyncComponent(
                     scoped: true
                   })
                   style.textContent = code
-                  document.head.appendChild(style)
+                  if (props.mode === 'editor' && document.getElementById(styleId)) {
+                    document.head.replaceChild(style, document.getElementById(styleId))
+                  } else {
+                    document.head.appendChild(style)
+                  }
                 }
               })
               return { cardData }
