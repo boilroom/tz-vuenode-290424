@@ -48,7 +48,6 @@ const dataUrlList = props.mode === 'editor' ?
         `${baseURL}/api/v1/card-template`,
       ]
 
-const dataLoaded = ref(false)
 const cmpRef = ref(null)
 
 const cmp = defineAsyncComponent(
@@ -57,7 +56,6 @@ const cmp = defineAsyncComponent(
       Promise.all(dataUrlList.map(url => fetch(url).then(resp => resp.json())))
         .then(data => {
           cardData.value = props.mode === 'editor' ? props.data : data[0]
-          dataLoaded.value = true
           resolve({
             template: (props.mode === 'editor' ? props.template : data[1].template) || templateDefault,
             setup() {
